@@ -49,7 +49,7 @@
         
             <div class="form-group">
                 <label for="Location">Location</label>
-                <select class="form-control" name="Location" id="Location" required>
+                <select class="form-control" name="location" id="Location" required>
                     <option value="">Select Location</option>
                     <option value="lahore">Lahore</option>
                     <option value="islamabad">Islamabad</option>
@@ -70,7 +70,7 @@
             </div>
         
             <div class="form-group">
-                <label for="price">Price (in USD)</label>
+                <label for="price">Price (in PKR)</label>
                 <input type="number" class="form-control" name="price" id="price" placeholder="Enter price" value="{{ old('price', 0) }}" min="0" required>
             </div>
         

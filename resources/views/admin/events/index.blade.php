@@ -28,26 +28,38 @@
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Slug</th>
+                            <th>Category</th>
+                            <th>Location</th>
+                            <th>Type</th>
+                            <th>Price</th>
                             <th>Action</th>
+
+
+
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @foreach ($categories as $category)
+                        @foreach ($events as $event)
                             <tr>
-                                <td>{{ $category->id }}</td>
-                                <td>{{ $category->name }}</td>
-                                <td>{{ $category->slug}}</td>
+                                <td>{{ $event->id }}</td>
+                                <td>{{ $event->name }}</td>
+                                <td>{{ $event->category->name}}</td>
+                                <td>{{ $event->location}}</td>
+                                <td>{{ $event->type}}</td>
+                                <td>{{ $event->price}}</td>
+
+
+
                                 <td>
-                                    <a href="{{ route('categories.edit', $category->id) }}" class="badge badge-success">Edit</a>
-                                    <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display:inline;">
+                                    <a href="{{ route('events.edit', $event->id) }}" class="badge badge-success">Edit</a>
+                                    <form action="{{ route('events.destroy', $event->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="badge badge-danger border-0">Delete</button>
                                     </form>
                                 </td>
                             </tr>
-                        @endforeach --}}
+                        @endforeach
                     </tbody>
                 </table>
             </div>
