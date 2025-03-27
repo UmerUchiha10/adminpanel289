@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
-
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/login', function () {
@@ -23,6 +23,8 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('posts', PostController::class);
     Route::resource('categories', CategoryController::class);
+    Route::resource('events', EventController::class);
+
 
 });
 
