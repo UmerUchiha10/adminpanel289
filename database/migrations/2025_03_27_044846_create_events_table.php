@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('location');
             $table->string('type',50);
             $table->bigInteger('price')->default(0);
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
+            $table->date('start_date');
+            $table->date('end_date');
             $table->bigInteger('max_attendees')->default(1);
             $table->timestamps();
         });
